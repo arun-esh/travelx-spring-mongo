@@ -2,7 +2,7 @@ package com.nysdas.travelx.springApplication.controller;
 
 import com.nysdas.travelx.springApplication.entity.Product;
 import com.nysdas.travelx.springApplication.repository.ProductRepository;
-import org.springframework.stereotype.Controller;
+import com.nysdas.travelx.springApplication.service.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,14 +11,14 @@ import java.util.List;
 @RestController
 public class ProductController {
 
-    private ProductRepository productRepository;
+    private ProductService productService;
 
-    public ProductController (ProductRepository theProductRepository){
-        productRepository = theProductRepository;
+    public ProductController (ProductService theProductService){
+        productService = theProductService;
     }
 
     @GetMapping("/list")
     public List<Product> getAllProducts(){
-        return productRepository.findAll();
+        return productService.findAll();
     }
 }
