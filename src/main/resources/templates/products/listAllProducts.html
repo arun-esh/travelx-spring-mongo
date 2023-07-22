@@ -1,0 +1,21 @@
+<!-- Header Injection Starts -->
+<div th:insert="~{header :: main-header}"></div>
+<!-- Header Injection Ends -->
+
+<!-- Path: src/main/resources/templates/products/listAllProducts.html -->
+
+<body>
+
+    <h1 style="text-align: center;">All Products</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div th:insert="~{table :: main-table}"></div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
