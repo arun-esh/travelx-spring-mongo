@@ -1,0 +1,48 @@
+<myTable th:fragment="main-table">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product summary</th>
+                <th>Product description</th>
+                <th>Product neighborhood_overview</th>
+                <th>Product notes</th>
+                <th>Product transit</th>
+                <th>Product access</th>
+                <th>Product house_rules</th>
+                <th>Product property_type</th>
+                <th>Product room_type</th>
+                <th>Product bed_type</th>
+                <th>Product cancellation_policy</th>
+                <th>Product accommodations</th>
+                <th>Product bedrooms</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.summary}"></td>
+                <td th:text="${product.description}"></td>
+                <td th:text="${product.neighborhood_overview}"></td>
+                <td th:text="${product.notes}"></td>
+                <td th:text="${product.transit}"></td>
+                <td th:text="${product.access}"></td>
+                <td th:text="${product.house_rules}"></td>
+                <td th:text="${product.property_type}"></td>
+                <td th:text="${product.room_type}"></td>
+                <td th:text="${product.bed_type}"></td>
+                <td th:text="${product.cancellation_policy}"></td>
+                <td th:text="${product.accommodates}"></td>
+                <td th:text="${product.bedrooms}"></td>
+                <td>
+                    <a th:href="@{/products/edit/{id}(id=${product.id})}">Edit</a>
+                    <a th:href="@{/products/delete/{id}(id=${product.id})}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</myTable>
