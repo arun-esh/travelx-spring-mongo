@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<!-- Header Injection Starts -->
-<!--<head th:insert="~{header :: main-header}"></head>-->
-<!-- Header Injection Ends -->
-
-<!-- Path: src/main/resources/templates/products/listAllProducts.html -->
-
-<!--<!DOCTYPE html>-->
-<!--<html xmlns:th="http://www.thymeleaf.org">-->
-
-<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">-->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,28 +23,6 @@
 <div class="main-landing-page">
     <div th:insert="~{card :: main-card}"></div>
 </div>
-
-
-
-
-<!--</body>-->
-<!--</html>-->
-
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>Name</th>-->
-<!--                <th>Price</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--            &lt;!&ndash; Loop through the products &ndash;&gt;-->
-<!--            <tr th:each="product : ${products}">-->
-<!--                <td th:text="${product.name}"></td>-->
-<!--                <td th:text="${#numbers.formatDecimal(product.price, 2, 'POINT', 2, 'POINT')}"></td>-->
-<!--            </tr>-->
-<!--        </tbody>-->
-<!--    </table>-->
 
     <!-- Pagination links -->
     <div class="pagination" th:if="${totalPages > 1}">

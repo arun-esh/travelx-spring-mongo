@@ -136,7 +136,7 @@ img {
 .pagination {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 .pagination ul {
