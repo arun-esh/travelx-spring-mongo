@@ -4,13 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title></title>
+
+    <title>Travelx | Rental Homes </title>
 </head>
 
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Home</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+</div>
+
+
 <div class="header">
-    <div >
+    <div>
+        <span class="openbtn" onclick="openNav()">&#9776;</span>
         <h1>Travelx</h1>
         <h3>Holiday Rental Places</h3>
     </div>
@@ -20,13 +31,13 @@
 <body>
 
 
-<div class="main-landing-page">
-    <div th:insert="~{card :: main-card}"></div>
-</div>
+    <div class="main-landing-page">
+        <div th:insert="~{card :: main-card}"></div>
+    </div>
 
     <!-- Pagination links -->
     <div class="pagination" th:if="${totalPages > 1}">
-        <ul >
+        <ul>
             <li th:class="${currentPage == 0 ? 'disabled' : ''}">
                 <a th:href="@{/product(page=0)}" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
             </li>
@@ -48,6 +59,8 @@
             </li>
         </ul>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

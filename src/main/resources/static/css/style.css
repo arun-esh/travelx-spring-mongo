@@ -156,7 +156,8 @@ img {
     padding: 6px 12px;
     text-decoration: none;
     color: #333;
-    border: 1px solid transparent; /* Remove outer border */
+    border: 1px solid transparent;
+    /* Remove outer border */
     background-color: #fff;
     border-radius: 3px;
 }
@@ -182,8 +183,64 @@ img {
     .pagination li {
         margin: 0 2px;
     }
+
     .pagination a,
     .pagination span {
         padding: 4px 8px;
     }
+}
+
+/*  NAVIGATION */
+
+/* Base styles for the side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 250px; /* Set the initial width to the desired value */
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide the menu initially by positioning it outside the screen */
+    background-color: rgba(17, 17, 17, 0.9); /* Add opacity here */
+    color: #fff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+/* Styles for the links in the side navigation menu */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: 0.2s;
+    color: #fff; /* Set the link color to white */
+}
+
+.sidenav a:hover {
+    background-color: #444;
+}
+
+/* Close button styles */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Open button styles */
+.openbtn {
+    font-size: 40px; /* Increase font size to make it bigger */
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px; /* Align to the right side */
+    z-index: 9999;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.openbtn:hover {
+    color: #aaa;
 }

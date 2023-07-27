@@ -21,6 +21,17 @@ public class ProductController {
         productService = theProductService;
     }
 
+    @GetMapping("/login")
+    // add a mapping for "/login"
+    public String getLoginPage() {
+        return "products/login";
+    }
+
+    @GetMapping("/signup")
+    public String getSignUpPage() {
+        return "products/signup";
+    }
+
     @GetMapping("/list")
     public String getAllProducts(Model theProductModel) {
         List<Product> theProducts = productService.findAll();
