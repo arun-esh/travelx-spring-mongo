@@ -198,5 +198,9 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public long getCount() {
+        return 0;
+    }
 }
 

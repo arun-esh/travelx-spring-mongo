@@ -1,7 +1,8 @@
 package com.nysdas.travelx.springApplication.service;
 
 import com.nysdas.travelx.springApplication.entity.Product;
-import com.nysdas.travelx.springApplication.repository.ProductRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -15,4 +16,7 @@ public interface ProductService {
 
     void deleteById(String theId);
 
+    Page<Product> findAllPaginated(Pageable pageable);
+
+    long countProducts();
 }
