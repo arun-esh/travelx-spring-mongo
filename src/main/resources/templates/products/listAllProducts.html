@@ -1,21 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <!-- Header Injection Starts -->
-<div th:insert="~{header :: main-header}"></div>
+<!--<head th:insert="~{header :: main-header}"></head>-->
 <!-- Header Injection Ends -->
 
 <!-- Path: src/main/resources/templates/products/listAllProducts.html -->
 
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+    <title></title>
+</head>
+
+<div class="header">
+    <div >
+        <h1>Travelx</h1>
+        <h3>Holiday Rental Places</h3>
+    </div>
+</div>
+
+
 <body>
 
-    <h1 style="text-align: center;">All Products</h1>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div th:insert="~{table :: main-table}"></div>
-
-            </div>
-        </div>
+    <div class="main-landing-page">
+        <div th:insert="~{card :: main-card}"></div>
     </div>
+
+
+
 
 </body>
 </html>

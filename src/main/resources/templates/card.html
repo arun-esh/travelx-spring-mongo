@@ -1,0 +1,31 @@
+<card th:fragment="main-card">
+    <div class="card-container">
+        <div th:each="product : ${products}">
+            <div class="card-box">
+                <img th:src="${product.images.picture_url}" alt="Avatar" style="width:100%">
+                <div class="card-box-text-container">
+                    <h4 th:text="${product.name.length() > 25 ? product.name.substring(0, 25) + '...' : product.name}">
+                    </h4>
+                    <p th:text="${product.property_type}"></p>
+
+                    <div class="text-color-grey">
+
+                        <span th:text="${product.address.market}"></span>
+                        <span> | </span>
+                        <span th:text="${product.address.country}"></span>
+                        <span>(</span>
+                        <span th:text="${product.address.country_code}"></span>
+                        <span>)</span>
+                    </div>
+
+                    <div class="text-color-black">
+                        <span>$</span>
+                        <span th:text=" ${#numbers.formatDecimal(product.price, 2, 'POINT', 2,  'POINT')}"></span>
+                        <span>night</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</card>

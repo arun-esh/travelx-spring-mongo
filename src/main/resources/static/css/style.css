@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --color: #77bd4c;
+    --text-color-grey: #717171;
+    --transition-time: 0.5s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+h1 {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* HEADER */
+
+.header {
+    padding: 1rem;
+    text-align: center;
+    background: var(--color);
+    color: white;
+    font-size: 1rem;
+}
+
+/*MAIN LANDING PAGE*/
+
+.main-landing-page {
+    margin: 1.5rem;
+}
+
+/*CARD CSS*/
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.card-box {
+    background-color: white;
+    padding: 1rem;
+    color: black;
+    border-radius: .5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    mix-blend-mode: overlay;
+
+    background-size: cover;
+    background-position: center;
+    /* box-shadow: 0 0 5em -1em black; */
+    transition: all, var(--transition-time);
+    position: relative;
+    overflow: hidden;
+    /* border: 10px solid #ccc; */
+    text-decoration: none;
+}
+
+.card-box:hover .tags .tag {
+    background: var(--color);
+    color: white;
+}
+
+.card-box:hover {
+    transform: rotate(0);
+}
+
+.card-box:hover {
+    color: black;
+}
+
+
+.card-box:before,
+.card-box:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all, var(--transition-time);
+    transition-timing-function: ease-in-out;
+}
+
+.card-box:before {
+    background: var(--color);
+    width: 250%;
+    height: 250%;
+}
+
+.card-box:after {
+    background: var(--color);
+    width: 200%;
+    height: 200%;
+}
+
+.card-box:hover:before,
+.card-box:hover:after {
+    transform: scale(1);
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* CARD INTERIORS */
+
+.card-box-text-container {
+    padding: .5rem;
+}
+
+.card-box-text-container h4 {
+    text-align: center;
+}
+
+.text-color-grey {
+    color: var(--text-color-grey);
+}
+
+.text-color-black {
+    color: black;
+}

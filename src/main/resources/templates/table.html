@@ -17,6 +17,7 @@
                 <th>Product cancellation_policy</th>
                 <th>Product accommodations</th>
                 <th>Product bedrooms</th>
+                <th>Product URL</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -37,6 +38,8 @@
                 <td th:text="${product.cancellation_policy}"></td>
                 <td th:text="${product.accommodates}"></td>
                 <td th:text="${product.bedrooms}"></td>
+                <td th:text="${product.images}"></td>
+                <td th:text="${product.images.picture_url}"></td>
                 <td>
                     <a th:href="@{/products/edit/{id}(id=${product.id})}">Edit</a>
                     <a th:href="@{/products/delete/{id}(id=${product.id})}">Delete</a>

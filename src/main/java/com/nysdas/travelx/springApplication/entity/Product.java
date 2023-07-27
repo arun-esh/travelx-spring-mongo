@@ -21,11 +21,21 @@ public class Product {
     private String cancellation_policy;
     private String accommodates;
     private String bedrooms;
+    private Images images;
+    private Address address;
+
+    private double price;
 
     // default constructor
     public Product(){}
 
-    public Product(String name, String summary, String description, String neighborhood_overview, String notes, String transit, String access, String house_rules, String property_type, String room_type, String bed_type, String cancellation_policy, String accommodates, String bedrooms) {
+    public Product(String name, String summary, String description,
+                   String neighborhood_overview, String notes,
+                   String transit, String access,
+                   String house_rules, String property_type, String room_type,
+                   String bed_type, String cancellation_policy, String accommodates,
+                   String bedrooms, Images images, Address address, double price
+    ) {
         this.name = name;
         this.summary = summary;
         this.description = description;
@@ -40,6 +50,9 @@ public class Product {
         this.cancellation_policy = cancellation_policy;
         this.accommodates = accommodates;
         this.bedrooms = bedrooms;
+        this.images = images;
+        this.address = address;
+        this.price = price;
     }
 
     public String getId() {
@@ -160,6 +173,30 @@ public class Product {
 
     public void setBedrooms(String bedrooms) {
         this.bedrooms = bedrooms;
+    }
+
+    public Images getImages() {
+        return images;
+    }
+
+    public void setImages(Images images) {
+        this.images = images;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
 
